@@ -18,7 +18,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            cd /home/ubuntu/alta_be13 
+            cd /home/ubuntu/alta_be13/be13-aws
             git pull origin main
             docker stop beContainer
             docker rm beContainer
