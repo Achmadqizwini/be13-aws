@@ -43,7 +43,7 @@ func (delivery *UserDelivery) Create(c echo.Context) error {
 	dataCore := toCore(userInput)
 	err := delivery.userService.Create(dataCore)
 	if err != nil {
-		return c.JSON(http.StatusInternalServerError, helper.FailedResponse("Failed insert data"+err.Error()))
+		return c.JSON(http.StatusInternalServerError, helper.FailedResponse("failed insert data"+err.Error()))
 	}
 	return c.JSON(http.StatusCreated, helper.SuccessResponse("success create data"))
 }
